@@ -1,9 +1,9 @@
 '''
-© Mrvishal2k2
+© us6a02
 RenameBot
-This file is a part of mrvishal2k2 rename repo 
+This file is a part of us6a02 rename repo 
 Dont kang !!!
-© Mrvishal2k2
+© us6a02
 '''
 import os 
 
