@@ -1,6 +1,6 @@
 '''
 © us6a02
-RenameBot
+Renam_eBot
 This file is a part of us6a02 rename repo 
 Dont kang !!!
 © us6a02
