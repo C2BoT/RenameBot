@@ -1,9 +1,9 @@
 '''
-RenameBot
+Renam_eBot
 Thanks to Spechide Unkle as always for the concept  ♥️
-This file is a part of mrvishal2k2 rename repo 
+This file is a part of us6a02 rename repo 
 Dont kang !!!
-© Mrvishal2k2
+© us6a02
 '''
 import os
 import logging
@@ -19,17 +19,17 @@ import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-@Client.on_message(filters.command("help"))
+@us6a02.on_message(filters.command("help"))
 async def help_user(c,m):
     try:
        await m.reply_text(Translation.HELP_USER,quote=True)
     except Exception as e:
         log.info(str(e))
         
-@Client.on_message(filters.command("start"))
+@us6a02.on_message(filters.command("start"))
 async def start_msg(c,m):
     button = [[
-               InlineKeyboardButton("Owner ", url=f"https://t.me/{Config.OWNER_USERNAME}")
+               InlineKeyboardButton("New York", url=f"https://t.me/us7a5}")
              ]]
     markup = InlineKeyboardMarkup(button) 
     try:
@@ -38,7 +38,7 @@ async def start_msg(c,m):
         log.info(str(e))
 
         
-@Client.on_message(filters.command("log") & filters.private & filters.user(Config.OWNER_ID))
+@us6a02.on_message(filters.command("log") & filters.private & filters.user(Config.OWNER_ID))
 async def log_msg(c,m):
   z =await m.reply_text("Processing..", True)
   if os.path.exists("Log.txt"):
