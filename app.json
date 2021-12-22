@@ -1,0 +1,59 @@
+{
+  "name": "Renam_eBot",
+  "description": "Telegram's best Rename Bot. Create your Fork now.",
+  "keywords": [
+    "telegram",
+    "best",
+    "Rename",
+    "Convert",
+    "Caption"
+  ],
+  "website": "https://github.com/Bottom-T",
+  "repository": "https://github.com/Bottom-T/TE_RenameBot/tree/main",
+  "logo": "https://telegra.ph/file/4965669ba983cd0b6503a.png",
+  "env": {
+    "TG_BOT_TOKEN": {
+      "description": "Your bot token, Get it from @Botfather.",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "Owner userid to use for getting logs..",
+      "value": ""
+    },
+    "OWNER_USERNAME": {
+      "description": "(Optional)Owners username to use at start msg button..",
+      "required": false
+    },
+    "CUSTOM_CAPTION": {
+      "description": "(Optional)Custom caption to be added after file name in caption",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+    "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [{
+    "url": "heroku/python"
+  }, {
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
