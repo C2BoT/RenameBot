@@ -1,11 +1,11 @@
 '''
 Renam_eBot
-This file is a part of CLiENT rename repo 
+This file is a part of us6a02 rename repo 
 Dont kang !!!
 © us6a02
 '''
 import pyrogram
-from pyrogram import us7a5, filters
+from pyrogram import CLiENT, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import logging
 logging.basicConfig(level=logging.DEBUG,
