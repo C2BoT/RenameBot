@@ -1,9 +1,9 @@
 '''
-RenameBot
+Renam_eBot
 Thanks to Spechide Unkle as always fot the concept  ♥️
-This file is a part of mrvishal2k2 rename repo 
+This file is a part of us6a02 rename repo 
 Dont kang !!!
-© Mrvishal2k2
+© us6a02
 '''
 
 import logging
@@ -25,7 +25,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
 
-@Client.on_message(filters.photo)
+@us6a02.on_message(filters.photo)
 async def save_photo(c,m):
     v = await m.reply_text("Saving Thumbnail",True)
     if m.media_group_id is not None:
@@ -51,7 +51,7 @@ async def save_photo(c,m):
         except Exception as e:
           log.info(f"#Error {e}")
 
-@Client.on_message(filters.command(["deletethumb"]))
+@us6a02.on_message(filters.command(["deletethumb"]))
 async def delete_thumbnail(c,m):
     download_location = Config.DOWNLOAD_LOCATION + "/thumb/" + str(m.from_user.id)
     try:
@@ -61,7 +61,7 @@ async def delete_thumbnail(c,m):
         pass
     await m.reply_text("Thumbnail was removed Successfully 😋",quote=True)
 
-@Client.on_message(filters.command(["showthumb"]))
+@us6a02.on_message(filters.command(["showthumb"]))
 async def show_thumbnail(c,m):
     thumb_image_path = Config.DOWNLOAD_LOCATION + "/thumb/" + str(m.from_user.id) + ".jpg"
     msgg = await m.reply_text("Checking Thumbnail...",quote=True)
