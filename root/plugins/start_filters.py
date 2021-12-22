@@ -1,9 +1,9 @@
 '''
 RenameBot
 Thanks to Spechide Unkle as always for the concept  ♥️
-This file is a part of us6a02 rename repo 
+This file is a part of mrvishal2k2 rename repo 
 Dont kang !!!
-© us6a02
+© Mrvishal2k2
 '''
 import os
 import logging
@@ -19,17 +19,17 @@ import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-@CLiENT.on_message(filters.command("help"))
+@Client.on_message(filters.command("help"))
 async def help_user(c,m):
     try:
        await m.reply_text(Translation.HELP_USER,quote=True)
     except Exception as e:
         log.info(str(e))
         
-@CLiENT.on_message(filters.command("start"))
+@Client.on_message(filters.command("start"))
 async def start_msg(c,m):
     button = [[
-                [NEW YORK](https://t.me/us7a5)
+               InlineKeyboardButton("Owner ", url=f"https://t.me/{Config.OWNER_USERNAME}")
              ]]
     markup = InlineKeyboardMarkup(button) 
     try:
@@ -38,7 +38,7 @@ async def start_msg(c,m):
         log.info(str(e))
 
         
-@CLiENT.on_message(filters.command("log") & filters.private & filters.user(Config.OWNER_ID))
+@Client.on_message(filters.command("log") & filters.private & filters.user(Config.OWNER_ID))
 async def log_msg(c,m):
   z =await m.reply_text("Processing..", True)
   if os.path.exists("Log.txt"):
