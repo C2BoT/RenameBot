@@ -1,6 +1,6 @@
 '''
 Renam_eBot
-This file is a part of us6a02 rename repo 
+This file is a part of CLiENT rename repo 
 Dont kang !!!
 © us6a02
 '''
@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 log = logging.getLogger(__name__)
 
-@us7a5.on_message(filters.document | filters.video | filters.audio | filters.voice | filters.video_note | filters.animation) 
+@CLiENT.on_message(filters.document | filters.video | filters.audio | filters.voice | filters.video_note | filters.animation) 
 async def rename_filter(c,m):
   media = m.document or m.video or m.audio or m.voice or m.video_note or m.animation
   ## couldn't add photo bcoz i want all photos to use as thumb..
