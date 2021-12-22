@@ -1,8 +1,8 @@
 '''
-RenameBot
-This file is a part of mrvishal2k2 rename repo 
+Renam_eBot
+This file is a part of us6a02 rename repo 
 Dont kang !!!
-© Mrvishal2k2
+© us6a02
 '''
 import pyrogram
 from pyrogram import Client, filters
@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 log = logging.getLogger(__name__)
 
-@Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("rename")))
+@us6a02.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("rename")))
 async def rename_call(c,m):
   if m.data=="rename_file":
     mode = "File"
@@ -34,7 +34,7 @@ async def rename_call(c,m):
     reply_markup=ForceReply(True)
     )
 
-@Client.on_message(filters.private & filters.reply & filters.text)
+@us6a02.on_message(filters.private & filters.reply & filters.text)
 async def rep_rename_call(c, m):
     # check which mode first
     try:
@@ -119,7 +119,7 @@ async def renamer(c,m,as_file=False):
   
   
 
-@Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("cancel")))
+@us6a02.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("cancel")))
 async def cancel_call(c,m):
    if m.data=="cancel":
       await m.message.delete()
@@ -129,7 +129,7 @@ async def cancel_call(c,m):
 
 
 
-@Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("convert")))
+@us6a02.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("convert")))
 async def convert_call(c,m):
   usr_msg = m.message.reply_to_message
   d_msg = await m.message.edit_text(Translation.DOWNLOAD_MSG)
