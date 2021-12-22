@@ -8,7 +8,7 @@ and Auto detection !!
 ### Installation
 
 #### Easy Way 
-Use [RenameBot](https://t.me/Renam_eBot) 
+Use [Renam_eBot](https://t.me/Renam_eBot) 
 
 #### The Simple Way
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
@@ -25,4 +25,5 @@ python3 bot.py
 
 ### Developer 
 * Telegram [Peter](https://t.me/us6a02) 
-* You can checkout my bots At [USA](https://t.me/us7a5)
+* You can checkout my bots At [USA](https://t.me/us7a5)
+
