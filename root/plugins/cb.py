@@ -21,14 +21,14 @@ log = logging.getLogger(__name__)
 @Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("rename")))
 async def rename_call(c,m):
   if m.data=="rename_file":
-    mode = "File"
+    mode = "𝐅𝐈𝐋𝐄"
   elif m.data == "rename_video":
-    mode = "Video"
+    mode = "𝐕𝐈𝐃𝐄𝐎"
   else: # this couldnt happen
     pass
   await m.message.delete()
   await c.send_message(
-    text=f"Mode: {mode} \nNow send me new file name without extension",
+    text=f"𝐌𝐎𝐃𝐄: {mode} \n𝐍𝐎𝐖 𝐒𝐄𝐍𝐃 𝐌𝐄 𝐍𝐄𝐖 𝐅𝐈𝐋𝐄 𝐍𝐀𝐌𝐄 𝐖𝐈𝐓𝐇𝐎𝐔𝐓 𝐄𝐗𝐓𝐄𝐍𝐒𝐈𝐎𝐍",
     chat_id=m.message.chat.id,
     reply_to_message_id=m.message.reply_to_message.message_id,
     reply_markup=ForceReply(True)
@@ -40,9 +40,9 @@ async def rep_rename_call(c, m):
     try:
         get_mode = str(m.reply_to_message.text).splitlines()[0].split(" ")[1]
     except IndexError:
-        get_mode = "Video"
+        get_mode = "𝐕𝐈𝐃𝐄𝐎"
     if (m.reply_to_message.reply_markup) and isinstance(m.reply_to_message.reply_markup, ForceReply):
-      if get_mode == "File":
+      if get_mode == "𝐅𝐈𝐋𝐄":
         asyncio.create_task(renamer(c, m,as_file=True))   
       else:
         asyncio.create_task(renamer(c, m))
