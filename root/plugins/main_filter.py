@@ -26,15 +26,15 @@ async def rename_filter(c,m):
     # some files dont gib name ..
     filename = None 
     
-  text += "Select the desired Option"
+  text += "𝒔𝒆𝒍𝒆𝒄𝒕 𝒕𝒉𝒆 𝒅𝒆𝒔𝒊𝒓𝒆𝒅 𝒐𝒑𝒕𝒊𝒐𝒏"
   button.append([InlineKeyboardButton("Rename as File", callback_data="rename_file")])
   # Thanks to albert for mime_type suggestion 
   if media.mime_type.startswith("video/"):
     ## how the f the other formats can be uploaded as video 
-    button.append([InlineKeyboardButton("Rename as Video",callback_data="rename_video")])
-    button.append([InlineKeyboardButton("Convert as File",callback_data="convert_file")])
-    button.append([InlineKeyboardButton("Convert as Video",callback_data="convert_video")])
-  button.append([InlineKeyboardButton("Cancel ❌",callback_data="cancel")])
+    button.append([InlineKeyboardButton("𝒓𝒆𝒏𝒂𝒎𝒆 𝒂𝒔 𝒗𝒊𝒅𝒆𝒐",callback_data="rename_video")])
+    button.append([InlineKeyboardButton("𝒄𝒐𝒏𝒗𝒆𝒓𝒕 𝒂𝒔 𝒇𝒊𝒍𝒆",callback_data="convert_file")])
+    button.append([InlineKeyboardButton("𝒄𝒐𝒏𝒗𝒆𝒓𝒕 𝒂𝒔 𝒗𝒊𝒅𝒆𝒐",callback_data="convert_video")])
+  button.append([InlineKeyboardButton("𝒄𝒂𝒏𝒄𝒆𝒍 ❌",callback_data="cancel")])
  
   markup = InlineKeyboardMarkup(button)
   try:
