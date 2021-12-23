@@ -1,6 +1,6 @@
 '''
 © us6a02
-Renam_eBot
+RenameBot
 This file is a part of us6a02 rename repo 
 Dont kang !!!
 © us6a02
@@ -182,4 +182,5 @@ async def uploader(bot,file, update, msg,as_file=False):
                 logger.info(str(er))
             if thumb_image_path is not None:
                  os.remove(thumb_image_path)  
+
 
