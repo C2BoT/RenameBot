@@ -29,7 +29,7 @@ async def help_user(c,m):
 @Client.on_message(filters.command("start"))
 async def start_msg(c,m):
     button = [[
-               InlineKeyboardButton("New York", url=f"https://t.me/us7a5")
+               InlineKeyboardButton("𝒏𝒆𝒘 𝒚𝒐𝒓𝒌", url=f"https://t.me/us7a5")
              ]]
     markup = InlineKeyboardMarkup(button) 
     try:
