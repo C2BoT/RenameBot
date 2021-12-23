@@ -89,7 +89,7 @@ async def show_thumbnail(c,m):
 
         await m.reply_photo(
         photo=thumb_image_path,
-        caption="𝒕𝒉𝒊𝒔 𝒊𝒔 𝒕𝒉𝒆 𝒔𝒂𝒗𝒆𝒅 𝒕𝒉𝒖𝒎𝒃𝒏𝒂𝒊𝒍!!!\n𝒚𝒐𝒖 𝒄𝒂𝒏 𝒅𝒆𝒍𝒆𝒕𝒆 𝒕𝒉𝒊𝒔 𝒃𝒚 𝒖𝒔𝒊𝒏𝒈 \n/deletethumb 𝒄𝒐𝒎𝒎𝒂𝒏𝒅",
+        caption="This is the Saved Thumbnail!!!\nYou Can delete this by using \n/deletethumb Command",
         quote=True
     )
 
