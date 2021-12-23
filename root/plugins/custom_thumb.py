@@ -92,5 +92,3 @@ async def show_thumbnail(c,m):
         caption="This is the Saved Thumbnail!!!\nYou Can delete this by using \n/deletethumb Command",
         quote=True
     )
-
-
