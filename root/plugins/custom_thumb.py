@@ -47,7 +47,7 @@ async def save_photo(c,m):
             file_name=download_location
         ) 
         try:
-           await v.edit_text("Thumbnail Saved Successfully.. 😍")
+           await v.edit_text("𝒕𝒉𝒖𝒎𝒃𝒐𝒏𝒂𝒊𝒍 𝒔𝒂𝒗𝒆𝒅 𝒔𝒖𝒄𝒄𝒆𝒔𝒔𝒇𝒖𝒍𝒍𝒚.. 😍")
         except Exception as e:
           log.info(f"#Error {e}")
 
@@ -59,7 +59,7 @@ async def delete_thumbnail(c,m):
         await del_thumb(m.from_user.id)
     except:
         pass
-    await m.reply_text("Thumbnail was removed Successfully 😋",quote=True)
+    await m.reply_text("𝒕𝒉𝒖𝒎𝒃𝒏𝒂𝒊𝒍 𝒘𝒂𝒔 𝒓𝒆𝒎𝒐𝒗𝒆𝒅 𝒔𝒖𝒄𝒄𝒆𝒔𝒔𝒇𝒖𝒍𝒍𝒚 😋",quote=True)
 
 @Client.on_message(filters.command(["showthumb"]))
 async def show_thumbnail(c,m):
