@@ -1,9 +1,9 @@
 class Translation(object):
-    START_TEXT = "**My channel :@us7a5 I'm a Rename and Convert Bot\nJust send me any media to change file name.\nUse /help command for more details **"
+    START_TEXT = "**𝒊'𝒎 𝒂 𝒓𝒆𝒏𝒂𝒎𝒆 𝒂𝒏𝒅 𝒄𝒐𝒏𝒗𝒆𝒓𝒕 𝒃𝒐𝒕\n𝒋𝒖𝒔𝒕 𝒔𝒆𝒏𝒅 𝒎𝒆 𝒂𝒏𝒚 𝒎𝒆𝒅𝒊𝒂 𝒕𝒐 𝒄𝒉𝒂𝒏𝒈𝒆 𝒇𝒊𝒍𝒆 𝒏𝒂𝒎𝒆.\n𝒖𝒔𝒆 /help 𝒄𝒐𝒎𝒎𝒂𝒏𝒅 𝒇𝒐𝒓 𝒎𝒐𝒓𝒆 𝒅𝒆𝒕𝒂𝒊𝒍𝒔 **"
 ######################
-    HELP_USER = """**>>Send File/Video\n>>Select desired Option\n>>And Done wait for it to process files**"""
-    DOWNLOAD_MSG = "**Downloading **⏬"
-    DOWNLOAD_FAIL_MSG = "**Failed to Download File**❎"
-    UPLOAD_MSG = "**Uploading** ⏫"
-    UPLOAD_FAIL_MSG = "**Failed to Upload File**❎"
-    UPLOAD_DONE_MSG = "**Uploaded Successfully 💡"
+    HELP_USER = """**➢ 𝒔𝒆𝒏𝒅 𝒇𝒊𝒍𝒆▁𝒗𝒊𝒅𝒆𝒐\n➢ 𝒔𝒆𝒍𝒆𝒄𝒕 𝒅𝒆𝒔𝒊𝒓𝒆𝒅 𝒐𝒑𝒕𝒊𝒐𝒏\n➢ 𝒂𝒏𝒅 𝒅𝒐𝒏𝒆 𝒘𝒂𝒊𝒕 𝒇𝒐𝒓 𝒊𝒕 𝒕𝒐 𝒑𝒓𝒐𝒄𝒆𝒔𝒔 𝒇𝒊𝒍𝒆𝒔**"""
+    DOWNLOAD_MSG = "**𝒅𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒊𝒏𝒂 **✎"
+    DOWNLOAD_FAIL_MSG = "**𝒇𝒂𝒊𝒍𝒆𝒅 𝒕𝒐 𝒅𝒐𝒘𝒏𝒍𝒐𝒂𝒅 𝒇𝒊𝒍𝒆**⊠"
+    UPLOAD_MSG = "**𝒖𝒑𝒍𝒐𝒂𝒅𝒊𝒏𝒈** ✐"
+    UPLOAD_FAIL_MSG = "**𝒇𝒂𝒊𝒍𝒆𝒅 𝒕𝒐 𝒖𝒑𝒍𝒐𝒂𝒅 𝒇𝒊𝒍𝒆**⊠"
+    UPLOAD_DONE_MSG = "**𝒖𝒑𝒍𝒐𝒂𝒅𝒆𝒅 𝒔𝒖𝒄𝒄𝒆𝒔𝒔𝒇𝒖𝒍𝒍𝒚 ♲"
