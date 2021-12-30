@@ -21,14 +21,14 @@ log = logging.getLogger(__name__)
 @Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("rename")))
 async def rename_call(c,m):
   if m.data=="rename_file":
-    mode = "𝐅𝐈𝐋𝐄"
+    mode = "𝗙𝗜𝗟𝗘"
   elif m.data == "rename_video":
-    mode = "𝐕𝐈𝐃𝐄𝐎"
+    mode = "𝗩𝗜𝗗𝗘𝗢"
   else: # this couldnt happen
     pass
   await m.message.delete()
   await c.send_message(
-    text=f"𝐌𝐎𝐃𝐄: {mode} \n𝐍𝐎𝐖 𝐒𝐄𝐍𝐃 𝐌𝐄 𝐍𝐄𝐖 𝐅𝐈𝐋𝐄 𝐍𝐀𝐌𝐄 𝐖𝐈𝐓𝐇𝐎𝐔𝐓 𝐄𝐗𝐓𝐄𝐍𝐒𝐈𝐎𝐍",
+    text=f"𝗠𝗢𝗗𝗘: {mode} \n𝗡𝗢𝗪 𝗦𝗘𝗡𝗗 𝗠𝗘 𝗡𝗘𝗪 𝗙𝗜𝗟𝗘 𝗡𝗔𝗠𝗘 𝗪𝗜𝗧𝗛𝗢𝗨𝗧 𝗘𝗫𝗧𝗘𝗡𝗦𝗜𝗢𝗡",
     chat_id=m.message.chat.id,
     reply_to_message_id=m.message.reply_to_message.message_id,
     reply_markup=ForceReply(True)
@@ -40,9 +40,9 @@ async def rep_rename_call(c, m):
     try:
         get_mode = str(m.reply_to_message.text).splitlines()[0].split(" ")[1]
     except IndexError:
-        get_mode = "𝐕𝐈𝐃𝐄𝐎"
+        get_mode = "𝗩𝗜𝗗𝗘𝗢"
     if (m.reply_to_message.reply_markup) and isinstance(m.reply_to_message.reply_markup, ForceReply):
-      if get_mode == "𝐅𝐈𝐋𝐄":
+      if get_mode == "𝗙𝗜𝗟𝗘":
         asyncio.create_task(renamer(c, m,as_file=True))   
       else:
         asyncio.create_task(renamer(c, m))
@@ -63,7 +63,7 @@ async def renamer(c,m,as_file=False):
     extension = "mkv"
   await bot_msg.delete() # delete name asked msg 
   if len(new_f_name) > 64:
-      await m.reply_text(text=f"𝐋𝐈𝐌𝐈𝐓𝐒 𝐎𝐅 𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌 𝐅𝐈𝐋𝐄  𝐍𝐀𝐌𝐄 𝐈𝐒 64 𝐂𝐇𝐀𝐑𝐄𝐂𝐓𝐄𝐑𝐒 𝐎𝐍𝐋𝐘\n𝐑𝐄𝐃𝐔𝐂𝐄 𝐒𝐎𝐌𝐄 𝐀𝐍𝐃 𝐓𝐑𝐘 𝐀𝐆𝐀𝐈𝐍.")
+      await m.reply_text(text=f"𝗟𝗜𝗠𝗜𝗧𝗦 𝗢𝗙 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 𝗙𝗜𝗟𝗘  𝗡𝗔𝗠𝗘 𝗜𝗦 𝟲𝟰 𝗖𝗛𝗔𝗥𝗘𝗖𝗧𝗘𝗥𝗦 𝗢𝗡𝗟𝗬\n𝗥𝗘𝗗𝗨𝗖𝗘 𝗦𝗢𝗠𝗘 𝗔𝗡𝗗 𝗧𝗥𝗬 𝗔𝗚𝗔𝗜𝗡.")
       return
   d_msg = await m.reply_text(Translation.DOWNLOAD_MSG,True)
   d_location = Config.DOWNLOAD_LOCATION + "/" + str(m.chat.id) + "/"
