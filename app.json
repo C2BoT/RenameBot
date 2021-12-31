@@ -9,8 +9,8 @@
     "Caption"
   ],
   "website": "https://github.com/Bottom-T",
-  "repository": "https://github.com/Bottom-T/TE_RenameBot/tree/main",
-  "logo": "https://telegra.ph/file/4965669ba983cd0b6503a.png",
+  "repository": "https://github.com/Bottom-T/TE_RenameBot/tree/master",
+  "logo": "https://telegra.ph/file/39fb17562a408821d9e04.jpg",
   "env": {
     "TG_BOT_TOKEN": {
       "description": "Your bot token, Get it from @Botfather.",
