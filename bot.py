@@ -1,7 +1,7 @@
-# Renam_eBot
-# This file is a part of us6a02 rename repo 
+# RenameBot
+# This file is a part of us7a5 rename repo 
 # Dont kang !!!
-# © us6a02
+# © us7a5
 
 import os, logging
 from root.config import Config
@@ -53,5 +53,4 @@ class Bot(Client):
 
 app = Bot()
 app.run()
-
 
