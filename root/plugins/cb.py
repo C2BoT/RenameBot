@@ -1,9 +1,7 @@
-'''
-Renam_eBot
-This file is a part of us6a02 rename repo 
-Dont kang !!!
-© us6a02
-'''
+#RenameBot
+#This file is a part of us6a02 rename repo 
+#Dont kang !!!
+#© us6a02
 import pyrogram
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,ForceReply
@@ -18,31 +16,31 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 log = logging.getLogger(__name__)
 
-@Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("rename")))
+@us6a02.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("rename")))
 async def rename_call(c,m):
   if m.data=="rename_file":
-    mode = "𝗙𝗜𝗟𝗘"
+    mode = "File"
   elif m.data == "rename_video":
-    mode = "𝗩𝗜𝗗𝗘𝗢"
+    mode = "Video"
   else: # this couldnt happen
     pass
   await m.message.delete()
   await c.send_message(
-    text=f"𝗠𝗢𝗗𝗘: {mode} \n𝗡𝗢𝗪 𝗦𝗘𝗡𝗗 𝗠𝗘 𝗡𝗘𝗪 𝗙𝗜𝗟𝗘 𝗡𝗔𝗠𝗘 𝗪𝗜𝗧𝗛𝗢𝗨𝗧 𝗘𝗫𝗧𝗘𝗡𝗦𝗜𝗢𝗡",
+    text=f"Mode: {mode} \nNow send me new file name without extension",
     chat_id=m.message.chat.id,
     reply_to_message_id=m.message.reply_to_message.message_id,
     reply_markup=ForceReply(True)
     )
 
-@Client.on_message(filters.private & filters.reply & filters.text)
+@us6a02.on_message(filters.private & filters.reply & filters.text)
 async def rep_rename_call(c, m):
     # check which mode first
     try:
         get_mode = str(m.reply_to_message.text).splitlines()[0].split(" ")[1]
     except IndexError:
-        get_mode = "𝗩𝗜𝗗𝗘𝗢"
+        get_mode = "Video"
     if (m.reply_to_message.reply_markup) and isinstance(m.reply_to_message.reply_markup, ForceReply):
-      if get_mode == "𝗙𝗜𝗟𝗘":
+      if get_mode == "File":
         asyncio.create_task(renamer(c, m,as_file=True))   
       else:
         asyncio.create_task(renamer(c, m))
@@ -61,9 +59,9 @@ async def renamer(c,m,as_file=False):
     extension = media_name.split(".")[-1]
   except:
     extension = "mkv"
-  await bot_msg.delete() # delete name asked msg
-if len(new_f_name) > 64:
-      await m.reply_text(text=f"𝗟𝗜𝗠𝗜𝗧𝗦 𝗢𝗙 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 𝗙𝗜𝗟𝗘  𝗡𝗔𝗠𝗘 𝗜𝗦 𝟲𝟰 𝗖𝗛𝗔𝗥𝗘𝗖𝗧𝗘𝗥𝗦 𝗢𝗡𝗟𝗬\n𝗥𝗘𝗗𝗨𝗖𝗘 𝗦𝗢𝗠𝗘 𝗔𝗡𝗗 𝗧𝗥𝗬 𝗔𝗚𝗔𝗜𝗡.") 
+  await bot_msg.delete() # delete name asked msg 
+  if len(new_f_name) > 64:
+      await m.reply_text(text=f"Limits of telegram file name is 64 charecters only\nReduce some and try again.")
       return
   d_msg = await m.reply_text(Translation.DOWNLOAD_MSG,True)
   d_location = Config.DOWNLOAD_LOCATION + "/" + str(m.chat.id) + "/"
@@ -119,7 +117,7 @@ if len(new_f_name) > 64:
   
   
 
-@Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("cancel")))
+@us6a02.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("cancel")))
 async def cancel_call(c,m):
    if m.data=="cancel":
       await m.message.delete()
@@ -129,7 +127,7 @@ async def cancel_call(c,m):
 
 
 
-@Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("convert")))
+@us6a02.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("convert")))
 async def convert_call(c,m):
   usr_msg = m.message.reply_to_message
   d_msg = await m.message.edit_text(Translation.DOWNLOAD_MSG)
