@@ -16,12 +16,12 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 log = logging.getLogger(__name__)
 
-@us6a02.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("rename")))
+@Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("rename")))
 async def rename_call(c,m):
   if m.data=="rename_file":
-    mode = "File"
+    mode = "𝗙𝗜𝗟𝗘"
   elif m.data == "rename_video":
-    mode = "Video"
+    mode = "𝗩𝗜𝗗𝗘𝗢"
   else: # this couldnt happen
     pass
   await m.message.delete()
@@ -32,15 +32,15 @@ async def rename_call(c,m):
     reply_markup=ForceReply(True)
     )
 
-@us6a02.on_message(filters.private & filters.reply & filters.text)
+@Client.on_message(filters.private & filters.reply & filters.text)
 async def rep_rename_call(c, m):
     # check which mode first
     try:
         get_mode = str(m.reply_to_message.text).splitlines()[0].split(" ")[1]
     except IndexError:
-        get_mode = "Video"
+        get_mode = "𝗩𝗜𝗗𝗘𝗢"
     if (m.reply_to_message.reply_markup) and isinstance(m.reply_to_message.reply_markup, ForceReply):
-      if get_mode == "File":
+      if get_mode == "𝗙𝗜𝗟𝗘":
         asyncio.create_task(renamer(c, m,as_file=True))   
       else:
         asyncio.create_task(renamer(c, m))
@@ -60,8 +60,8 @@ async def renamer(c,m,as_file=False):
   except:
     extension = "mkv"
   await bot_msg.delete() # delete name asked msg 
-  if len(new_f_name) > 64:
-      await m.reply_text(text=f"Limits of telegram file name is 64 charecters only\nReduce some and try again.")
+  if len(new_f_name) > 1200:
+      await m.reply_text(text=f"𝗟𝗜𝗠𝗜𝗧𝗦 𝗢𝗙 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 𝗙𝗜𝗟𝗘  𝗡𝗔𝗠𝗘 𝗜𝗦 1200💓 𝗖𝗛𝗔𝗥𝗘𝗖𝗧𝗘𝗥𝗦 𝗢𝗡𝗟𝗬\n𝗥𝗘𝗗𝗨𝗖𝗘 𝗦𝗢𝗠𝗘 𝗔𝗡𝗗 𝗧𝗥𝗬 𝗔𝗚𝗔𝗜𝗡")
       return
   d_msg = await m.reply_text(Translation.DOWNLOAD_MSG,True)
   d_location = Config.DOWNLOAD_LOCATION + "/" + str(m.chat.id) + "/"
@@ -117,7 +117,7 @@ async def renamer(c,m,as_file=False):
   
   
 
-@us6a02.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("cancel")))
+@Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("cancel")))
 async def cancel_call(c,m):
    if m.data=="cancel":
       await m.message.delete()
@@ -127,7 +127,7 @@ async def cancel_call(c,m):
 
 
 
-@us6a02.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("convert")))
+@Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("convert")))
 async def convert_call(c,m):
   usr_msg = m.message.reply_to_message
   d_msg = await m.message.edit_text(Translation.DOWNLOAD_MSG)
