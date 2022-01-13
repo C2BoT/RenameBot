@@ -13,23 +13,23 @@
   "logo": "https://telegra.ph/file/39fb17562a408821d9e04.jpg",
   "env": {
     "TG_BOT_TOKEN": {
-      "description": "Your bot token, Get it from @Botfather.",
+      "description": "Your bot token, Get it from @Botfather : 𝗟𝗶𝗻𝗸 𝗬𝗼𝘂𝗧𝘂𝗯𝗲  https://youtu.be/fkOGvJYQ2Vo",
       "value": ""
     },
     "APP_ID": {
-      "description": "Get this value from https://my.telegram.org",
+      "description": "Get this value from https://my.telegram.org : 𝗟𝗶𝗻𝗸 𝗬𝗼𝘂𝗧𝘂𝗯𝗲  https://youtu.be/fkOGvJYQ2Vo",
       "value": ""
     },
     "API_HASH": {
-      "description": "Get this value from https://my.telegram.org",
+      "description": "Get this value from https://my.telegram.org : 𝗟𝗶𝗻𝗸 𝗬𝗼𝘂𝗧𝘂𝗯𝗲  https://youtu.be/fkOGvJYQ2Vo",
       "value": ""
     },
     "OWNER_ID": {
-      "description": "Owner userid to use for getting logs..",
+      "description": "Owner userid to use for getting logs.. : 𝗟𝗶𝗻𝗸 𝗬𝗼𝘂𝗧𝘂𝗯𝗲  https://youtu.be/fkOGvJYQ2Vo",
       "value": ""
     },
     "OWNER_USERNAME": {
-      "description": "(Optional)Owners username to use at start msg button..",
+      "description": "(Optional)Owners username to use at start msg button.. : 𝗟𝗶𝗻𝗸 𝗬𝗼𝘂𝗧𝘂𝗯𝗲  https://youtu.be/fkOGvJYQ2Vo",
       "required": false
     },
     "CUSTOM_CAPTION": {
