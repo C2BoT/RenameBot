@@ -64,7 +64,7 @@ async def delete_thumbnail(c,m):
 @Client.on_message(filters.command(["showthumb"]))
 async def show_thumbnail(c,m):
     thumb_image_path = Config.DOWNLOAD_LOCATION + "/thumb/" + str(m.from_user.id) + ".jpg"
-    msgg = await m.reply_text("Checking Thumbnail...",quote=True)
+    msgg = await m.reply_text("𝗖𝗵𝗲𝗰𝗸𝗶𝗻𝗴 𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹",quote=True)
 
     if not os.path.exists(thumb_image_path):
         mes = await thumb(m.from_user.id)
@@ -77,7 +77,7 @@ async def show_thumbnail(c,m):
 
     if thumb_image_path is None:
         try:
-            await msgg.edit_text("No Saved Thumbnail Found!!")
+            await msgg.edit_text("𝗡𝗼 𝗦𝗮𝘃𝗲𝗱 𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹 𝗙𝗼𝘂𝗻𝗱")
         except:
               pass               
     else:
