@@ -27,7 +27,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 @Client.on_message(filters.photo)
 async def save_photo(c,m):
-    v = await m.reply_text("Saving Thumbnail",True)
+    v = await m.reply_text("𝗦𝗮𝘃𝗶𝗻𝗴 𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹",True)
     if m.media_group_id is not None:
         # album is sent
         download_location = Config.DOWNLOAD_LOCATION + "/thumb/" + str(m.from_user.id) + "/" + str(m.media_group_id) + "/"
@@ -47,7 +47,7 @@ async def save_photo(c,m):
             file_name=download_location
         ) 
         try:
-           await v.edit_text("Thumbnail Saved Successfully.. 😍")
+           await v.edit_text("𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹 𝗦𝗮𝘃𝗲𝗱 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 😍")
         except Exception as e:
           log.info(f"#Error {e}")
 
@@ -59,7 +59,7 @@ async def delete_thumbnail(c,m):
         await del_thumb(m.from_user.id)
     except:
         pass
-    await m.reply_text("Thumbnail was removed Successfully 😋",quote=True)
+    await m.reply_text("𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹 𝘄𝗮𝘀 𝗿𝗲𝗺𝗼𝘃𝗲𝗱 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 😋",quote=True)
 
 @Client.on_message(filters.command(["showthumb"]))
 async def show_thumbnail(c,m):
