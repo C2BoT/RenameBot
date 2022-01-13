@@ -21,14 +21,14 @@ log = logging.getLogger(__name__)
 @Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("rename")))
 async def rename_call(c,m):
   if m.data=="rename_file":
-    mode = "File"
+    mode = "𝗙𝗶𝗹𝗲"
   elif m.data == "rename_video":
-    mode = "Video"
+    mode = "𝗩𝗶𝗱𝗲𝗼"
   else: # this couldnt happen
     pass
   await m.message.delete()
   await c.send_message(
-    text=f"Mode: {mode} \nNow send me new file name without extension",
+    text=f"Mode: {mode} \n𝗡𝗼𝘄 𝘀𝗲𝗻𝗱 𝗺𝗲 𝗻𝗲𝘄 𝗳𝗶𝗹𝗲 𝗻𝗮𝗺𝗲 𝘄𝗶𝘁𝗵𝗼𝘂𝘁 𝗲𝘅𝘁𝗲𝗻𝘀𝗶𝗼𝗻",
     chat_id=m.message.chat.id,
     reply_to_message_id=m.message.reply_to_message.message_id,
     reply_markup=ForceReply(True)
@@ -40,9 +40,9 @@ async def rep_rename_call(c, m):
     try:
         get_mode = str(m.reply_to_message.text).splitlines()[0].split(" ")[1]
     except IndexError:
-        get_mode = "Video"
+        get_mode = "𝗩𝗶𝗱𝗲𝗼"
     if (m.reply_to_message.reply_markup) and isinstance(m.reply_to_message.reply_markup, ForceReply):
-      if get_mode == "File":
+      if get_mode == "𝗙𝗶𝗹𝗲":
         asyncio.create_task(renamer(c, m,as_file=True))   
       else:
         asyncio.create_task(renamer(c, m))
@@ -63,7 +63,7 @@ async def renamer(c,m,as_file=False):
     extension = "mkv"
   await bot_msg.delete() # delete name asked msg 
   if len(new_f_name) > 9800:
-      await m.reply_text(text=f"Limits of telegram file name is 9800 charecters only\nReduce some and try again.")
+      await m.reply_text(text=f"𝗟𝗶𝗺𝗶𝘁𝘀 𝗼𝗳 𝘁𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗳𝗶𝗹𝗲 𝗻𝗮𝗺𝗲 𝗶𝘀 𝟵𝟴𝟬𝟬 𝗰𝗵𝗮𝗿𝗲𝗰𝘁𝗲𝗿𝘀 𝗼𝗻𝗹𝘆\n𝗥𝗲𝗱𝘂𝗰𝗲 𝘀𝗼𝗺𝗲 𝗮𝗻𝗱 𝘁𝗿𝘆 𝗮𝗴𝗮𝗶𝗻")
       return
   d_msg = await m.reply_text(Translation.DOWNLOAD_MSG,True)
   d_location = Config.DOWNLOAD_LOCATION + "/" + str(m.chat.id) + "/"
