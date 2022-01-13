@@ -25,13 +25,11 @@
       "value": ""
     },
     "OWNER_ID": {
-      "description": "Owner userid to use for getting logs..   
-𝗬𝗼𝘂𝗧𝘂𝗯𝗲  https://youtu.be/fkOGvJYQ2Vo",
+      "description": "Owner userid to use for getting logs..:-https://youtu.be/fkOGvJYQ2Vo",
       "value": ""
     },
     "OWNER_USERNAME": {
-      "description": "(Optional)Owners username to use at start msg button..  
-𝗬𝗼𝘂𝗧𝘂𝗯𝗲  https://youtu.be/fkOGvJYQ2Vo",
+      "description": "(Optional)Owners username to use at start msg button..:-https://youtu.be/fkOGvJYQ2Vo",
       "required": false
     },
     "CUSTOM_CAPTION": {
