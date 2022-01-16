@@ -1,4 +1,4 @@
- # Renam_eBot
+ ### Renam_eBot
 A better rename and convert bot with upload mode option 
 and Auto detection !!
 
@@ -7,15 +7,15 @@ and Auto detection !!
 
 ### Installation
 
-#### Easy Way 
+### Easy Way 
 Use [Renam_eBot](https://t.me/Renam_eBot) 
 
-#### The Simple Way
+### The Simple Way
 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-#### Hard Way (VPS)
+### Hard Way (VPS)
 * This is just a demo of commands to use
 ```
 git clone https://github.com/Bottom-T/TE_RenameBot
