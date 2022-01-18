@@ -1,9 +1,9 @@
 '''
 Renam_eBot
 Thanks to Spechide Unkle as always for the concept  ♥️
-This file is a part of us6a02 rename repo 
+This file is a part of TE_GitHub rename repo 
 Dont kang !!!
-© us6a02
+© TE_GitHub
 '''
 import os
 import logging
