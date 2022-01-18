@@ -1,8 +1,8 @@
 '''
 Renam_eBot
-This file is a part of us6a02 rename repo 
+This file is a part of TE_GitHub rename repo 
 Dont kang !!!
-© us6a02
+© TE_GitHub
 '''
 import pyrogram
 from pyrogram import Client, filters
