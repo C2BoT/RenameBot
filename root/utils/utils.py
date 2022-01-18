@@ -1,4 +1,4 @@
-# This file all codes rights reserved by © Spechdie
+# This file all codes rights reserved by © TE_GitHub
 import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
