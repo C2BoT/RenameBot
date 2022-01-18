@@ -26,6 +26,6 @@ python3 bot.py
 ```
 
 ### Developer 
-* Telegram [Bottom-T](https://t.me/us6a02) 
-* You can checkout my bots At [USA](https://t.me/us7a5)
+* Telegram [BY](https://t.me/TE_GitHub) 
+* You can checkout my bots At [New York](https://t.me/us7a5)
 
