@@ -1,7 +1,7 @@
 # RenameBot
-# This file is a part of TE_GitHub rename repo 
+# This file is a part of us7a5 rename repo 
 # Dont kang !!!
-# © TE_GitHub
+# © us7a5
 
 import os, logging
 from root.config import Config
