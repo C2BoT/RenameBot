@@ -1,9 +1,9 @@
 '''
-© us7a5
+© TE_GitHub
 RenameBot
-This file is a part of us7a5 rename repo 
+This file is a part of TE_GitHub rename repo 
 Dont kang !!!
-© us7a5
+© TE_GitHub
 '''
 import os 
 
