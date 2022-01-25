@@ -13,7 +13,7 @@ Use [Renam_eBot](https://t.me/Renam_eBot)
 ### The Simple Way
 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Bottom-T/TE_RenameBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Bottom-T/RenameBot)
 
 ### Hard Way (VPS)
 * This is just a demo of commands to use
