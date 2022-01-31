@@ -13,6 +13,8 @@ Use [Renam_eBot](https://t.me/Renam_eBot)
 ### The Simple Way
 
 
+<p align="center"><a href="https://telegram.dog/XTZ_HerokuBot?start=Qm90dG9tLVQvUmVuYW1lQm90IFJlbmFtZUJvdA"><img src="https://img.shields.io/badge/Deploy%20Via%20Telegram-pink?style=for-the-badge&logo=telegram" width="250""/</a>  </p>
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Bottom-T/RenameBot)
 
 ### Hard Way (VPS)
