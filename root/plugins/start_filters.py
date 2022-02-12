@@ -11,6 +11,13 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 log = logging.getLogger(__name__)
 
+from pyrogram import Client,filters
+from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton
+from root.config import Config
+from root.messages import Translation
+import pyrogram
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
+
 
 @Client.on_message(filters.command("help"))
 async def help_user(c,m):
