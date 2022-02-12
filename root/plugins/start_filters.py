@@ -18,6 +18,33 @@ from root.messages import Translation
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
+
+@Client.on_message(filters.command("help"))
+async def help_user(c,m):
+    try:
+       await m.reply_text(Translation.HELP_USER,quote=True)
+    except Exception as e:
+        log.info(str(e))
+        
+@Client.on_message(filters.command("start"))
+async def start_msg(c,m):
+    button = [[
+               InlineKeyboardButton("𝗡𝗘𝗪 𝗬𝗢𝗥𝗞 ✈", url=f"https://t.me/us7a5")
+             ]]
+    markup = InlineKeyboardMarkup(button) 
+    try:
+       await m.reply_text(Translation.START_TEXT,quote=True,reply_markup=markup,disable_web_page_preview=True) 
+    except Exception as e:
+        log.info(str(e))       
+@Client.on_message(filters.command("log") & filters.private & filters.user(Config.OWNER_ID))
+async def log_msg(c,m):
+  z =await m.reply_text("Processing..", True)
+  if os.path.exists("Log.txt"):
+     await m.reply_document("Log.txt", True)
+     await z.delete()
+  else:
+    await z.edit_text("Log file not found")
+
 UPDATE_CHANNEL=Config.UPDATE_CHANNEL # Update Channel Forces Subscribe
 BOT_USERNAME=Config.BOT_USERNAME # ReStart Option 
 JOIN=Translation.JOIN_TEXT # Button Text (Update Channel)
@@ -46,30 +73,3 @@ async def info(motech, msg):
             await msg.reply_text(f"@{UPDATE_CHANNEL}")
             return
     if msg.forward_from:
-@Client.on_message(filters.command("help"))
-async def help_user(c,m):
-    try:
-       await m.reply_text(Translation.HELP_USER,quote=True)
-    except Exception as e:
-        log.info(str(e))
-        
-@Client.on_message(filters.command("start"))
-async def start_msg(c,m):
-    button = [[
-               InlineKeyboardButton("𝗡𝗘𝗪 𝗬𝗢𝗥𝗞 ✈", url=f"https://t.me/us7a5")
-             ]]
-    markup = InlineKeyboardMarkup(button) 
-    try:
-       await m.reply_text(Translation.START_TEXT,quote=True,reply_markup=markup,disable_web_page_preview=True) 
-    except Exception as e:
-        log.info(str(e))
-
-        
-@Client.on_message(filters.command("log") & filters.private & filters.user(Config.OWNER_ID))
-async def log_msg(c,m):
-  z =await m.reply_text("Processing..", True)
-  if os.path.exists("Log.txt"):
-     await m.reply_document("Log.txt", True)
-     await z.delete()
-  else:
-    await z.edit_text("Log file not found")
