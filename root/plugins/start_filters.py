@@ -66,10 +66,3 @@ async def info(motech, msg):
                 reply_markup=InlineKeyboardMarkup([
                     [ InlineKeyboardButton(text=f"{JOIN}", url=f"t.me/{UPDATE_CHANNEL}")],
                     [ InlineKeyboardButton(text=f"{TRY}", url=f"https://t.me/{BOT_USERNAME}?start=try")]
-              ])
-            )
-            return
-        except Exception:
-            await msg.reply_text(f"@{UPDATE_CHANNEL}")
-            return
-    if msg.forward_from:
