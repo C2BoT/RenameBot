@@ -63,4 +63,4 @@ async def info(motech, msg):
             #await update.reply_text(f"Join @{Channel User Name} To Use Me") From Motech.py
             await msg.reply_text(
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text=f"{JOIN}", url=f"t.me/{UPDATE_CHANNEL}")],
+                    [ InlineKeyboardButton(text=f"{JOIN}", url=f"t.me/{UPDATE_CHANNEL}")]
