@@ -12,7 +12,7 @@
   "repository": "https://github.com/Bottom-T/TE_RenameBot/tree/master",
   "logo": "https://telegra.ph/file/39fb17562a408821d9e04.jpg",
   "env": {
-    "BOT_TOKEN": {
+    "TG_BOT_TOKEN": {
       "description": "Your bot token, Get it from @Botfather:-https://youtu.be/fkOGvJYQ2Vo",
       "value": ""
     },
@@ -28,7 +28,7 @@
       "description": "Owner userid to use for getting logs..:-https://youtu.be/fkOGvJYQ2Vo",
       "value": ""
     },
-    "CHANNEL": {
+    "OWNER_USERNAME": {
       "description": "(Optional)CHANNEL username to use at start msg button..:-https://youtu.be/fkOGvJYQ2Vo",
       "required": false
     },
