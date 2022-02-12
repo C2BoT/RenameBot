@@ -39,6 +39,10 @@
         "UPDATE_CHANNEL": {
             "description": "Channel User Name Without @us7a5",
             "value": "us7a5"
+        },
+        "BOT_USERNAME": {
+            "description": "Bot UserName From (https://youtu.be/cB4UduCcNWs) Without @ ",
+            "value": ""
     }
   },
   "addons": [
