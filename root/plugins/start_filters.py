@@ -46,7 +46,6 @@ async def log_msg(c,m):
     await z.edit_text("Log file not found")
 
 UPDATE_CHANNEL=Config.UPDATE_CHANNEL # Update Channel Forces Subscribe
-BOT_USERNAME=Config.BOT_USERNAME # ReStart Option 
 JOIN=Translation.JOIN_TEXT # Button Text (Update Channel)
 TRY=Translation.TRY_TEXT # Button Text (Update Channel)
 SUB_TEXT=Translation.FSUB_TEXT # FSUB Information Text
@@ -65,4 +64,3 @@ async def info(motech, msg):
             await msg.reply_text(
                 reply_markup=InlineKeyboardMarkup([
                     [ InlineKeyboardButton(text=f"{JOIN}", url=f"t.me/{UPDATE_CHANNEL}")],
-                    [ InlineKeyboardButton(text=f"{TRY}", url=f"https://t.me/{BOT_USERNAME}?start=try")]
