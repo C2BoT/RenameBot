@@ -12,7 +12,6 @@ class Config(object):
   API_HASH = os.environ.get("API_HASH", "")
   TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
   UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "us7a5")
-  BOT_USERNAME = os.environ.get("BOT_USERNAME", "use-Bot")
 
   AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
   DOWNLOAD_LOCATION = "./bot/DOWNLOADS"
