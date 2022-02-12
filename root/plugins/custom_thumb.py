@@ -28,7 +28,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 @Client.on_message(filters.photo)
 async def save_photo(c,m):
     v = await m.reply_text("𝗦𝗮𝘃𝗶𝗻𝗴 𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹",True)
-   if m.media_group_id is not None:
+    if m.media_group_id is not None:
         # album is sent
         download_location = Config.DOWNLOAD_LOCATION + "/thumb/" + str(m.from_user.id) + "/" + str(m.media_group_id) + "/"
         if not os.path.isdir(download_location):
@@ -89,8 +89,6 @@ async def show_thumbnail(c,m):
 
         await m.reply_photo(
         photo=thumb_image_path,
-        caption="This is the Saved Thumbnail!!!\nYou Can delete this by using \n/deletethumb Command",
+        caption="𝗧𝗵𝗶𝘀 𝗶𝘀 𝘁𝗵𝗲 𝗦𝗮𝘃𝗲𝗱 𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹 \n𝗬𝗼𝘂 𝗖𝗮𝗻 𝗱𝗲𝗹𝗲𝘁𝗲 𝘁𝗵𝗶𝘀 𝗯𝘆 𝘂𝘀𝗶𝗻𝗴 \n/deletethumb 𝗖𝗼𝗺𝗺𝗮𝗻𝗱",
         quote=True
     )
-
-
