@@ -27,7 +27,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 @Client.on_message(filters.photo)
 async def save_photo(c,m):
-    
+    if m.media_group_id is not None:
         download_location = Config.DOWNLOAD_LOCATION + "/thumb/" + str(m.media_group_id) + "/" + str(m.from_user.id) + "/"
         if not os.path.isdir(download_location):
             os.mkdir(download_location)
