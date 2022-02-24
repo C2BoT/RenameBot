@@ -33,7 +33,7 @@ async def save_photo(c,m):
         download_location = Config.DOWNLOAD_LOCATION + "/thumb/" + str(m.media_group_id) + "/" + str(m.from_user.id) + "/"
         if not os.path.isdir(download_location):
             os.mkdir(download_location)
-        await df_thumb(m.from_user.id)
+        await df_thumb(m.from_user.id, m.message_id)
         await c.download_media(
             message=m,
             file_name=download_location
