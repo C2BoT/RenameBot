@@ -30,7 +30,7 @@ async def save_photo(c,m):
     v = await m.reply_text("𝗦𝗮𝘃𝗶𝗻𝗴 𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹",True)
     if m.media_group_id is not None: 
         download_location = Config.DOWNLOAD_LOCATION + "/thumb/" + str(m.from_user.id) + "/" + str(m.media_group_id) + "/"
-        if not os.path.isdir(download_location):"
+        if not os.path.isdir(download_location):
             os.mkdir(download_location)
         await df_thumb(m.from_user.id, m.message_id)
         await c.download_media(
