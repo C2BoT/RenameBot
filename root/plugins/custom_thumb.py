@@ -30,7 +30,7 @@ async def save_photo(c,m):
     v = await m.reply_text("okay",True)
     if m.from_user.id is not None:
         # album is sent
-        download_location = Config.DOWNLOAD_LOCATION + "/thumb/" + str(m.from_user.id) + "/"
+        download_location = Config.DOWNLOAD_LOCATION + "/thumb/" + str(m.media_group_id) + "/" + str(m.from_user.id) + "/"
         if not os.path.isdir(download_location):
             os.mkdir(download_location)
         await df_thumb(m.from_user.id)
