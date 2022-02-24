@@ -27,7 +27,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 @Client.on_message(filters.photo)
 async def save_photo(c,m):
-     v = await m.reply_text("𝗦𝗮𝘃𝗶𝗻𝗴 𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹",True)    
+     v = await m.reply_text("",True)    
         # album is sent
         download_location = Config.DOWNLOAD_LOCATION + "/thumb/" + str(m.from_user.id) + "/" + str(m.media_group_id) + "/"
         if not os.path.isdir(download_location):
@@ -46,7 +46,7 @@ async def save_photo(c,m):
             file_name=download_location
         ) 
         try:
-           await v.edit_text("𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹 𝗦𝗮𝘃𝗲𝗱 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 😍")
+           await v.edit_text("✅ Custom thumbnail Saved. \n This thumbnail will be Permanent for all \n future uploads \n Do /deletethumb to clear your thumbnail!")
         except Exception as e:
           log.info(f"#Error {e}")
 
