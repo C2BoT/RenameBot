@@ -1,9 +1,8 @@
 '''
-Renam_eBot
+RenameBot
 Thanks to Spechide Unkle as always fot the concept  ♥️
-This file is a part of TE_GitHub rename repo 
+This file is a part of mrvishal2k2 rename repo 
 Dont kang !!!
-© TE_GitHub
 '''
 
 import logging
@@ -28,7 +27,8 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 @Client.on_message(filters.photo)
 async def save_photo(c,m):
     v = await m.reply_text("𝗦𝗮𝘃𝗶𝗻𝗴 𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹",True)
-    if m.media_group_id is not None: 
+    if m.media_group_id is not None:
+        # album is sent
         download_location = Config.DOWNLOAD_LOCATION + "/thumb/" + str(m.from_user.id) + "/" + str(m.media_group_id) + "/"
         if not os.path.isdir(download_location):
             os.mkdir(download_location)
@@ -38,6 +38,7 @@ async def save_photo(c,m):
             file_name=download_location
         )
     else:
+        # received single photo
         download_location = Config.DOWNLOAD_LOCATION + "/thumb/" + str(m.from_user.id) + ".jpg"
         await df_thumb(m.from_user.id, m.message_id)
         await c.download_media(
@@ -90,3 +91,4 @@ async def show_thumbnail(c,m):
         caption="𝗧𝗵𝗶𝘀 𝗶𝘀 𝘁𝗵𝗲 𝗦𝗮𝘃𝗲𝗱 𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹 \n𝗬𝗼𝘂 𝗖𝗮𝗻 𝗱𝗲𝗹𝗲𝘁𝗲 𝘁𝗵𝗶𝘀 𝗯𝘆 𝘂𝘀𝗶𝗻𝗴 \n/deletethumb 𝗖𝗼𝗺𝗺𝗮𝗻𝗱",
         quote=True
     )
+
