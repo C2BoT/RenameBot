@@ -18,7 +18,7 @@ Use [Renam_eBot](https://t.me/Renam_eBot)
 ### Hard Way (VPS)
 * This is just a demo of commands to use
 ```
-git clone https://github.com/Bottom-T/TE_RenameBot
+git clone https://github.com/Bottom-T/RenameBot
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt
