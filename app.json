@@ -8,8 +8,8 @@
     "Convert",
     "Caption"
   ],
-  "website": "https://github.com/Bottom-T",
-  "repository": "https://github.com/Bottom-T/TE_RenameBot/tree/master",
+  "website": "https://github.com/C2BoT",
+  "repository": "https://github.com/C2BoT/RenameBot/tree/master",
   "logo": "https://telegra.ph/file/39fb17562a408821d9e04.jpg",
   "env": {
     "TG_BOT_TOKEN": {
